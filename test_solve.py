@@ -2,10 +2,12 @@ import unittest
 from main import Solve
 
 class TestSolve(unittest.TestCase):
-    ##
+    
     def setUp(self):
         self.sol = Solve() 
     
+    # нужны более разнообразные тесты
+    # здесь только int, float, -
     def test_1(self):
         self.assertEqual(self.sol.solve(5, 2), 30.0)
     
@@ -53,6 +55,7 @@ class TestSolve(unittest.TestCase):
     
 if __name__ == "__main__": 
     unittest.main()
+    input()
     
     
     

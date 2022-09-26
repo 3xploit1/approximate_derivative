@@ -1,2 +1,14 @@
 .vscode/launch.json
 __pycache__/main.cpython-310.pyc
+*.pyd
+*.zip
+*.exe
+*.dll
+*.pkg
+*.pyz
+*.toc 
+*.pyc
+*.spec
+*.html
+build/test_solve/test_solve.exe.manifest
+build/test_solve/warn-test_solve.txt
