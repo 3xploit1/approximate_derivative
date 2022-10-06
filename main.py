@@ -2,7 +2,7 @@ from sympy import *
 
 class Solve():
     def __init__(self):
-        pass 
+        self.h = 1e-5
         
     def func(self, val: int | float, flag: int):
         '''
@@ -18,7 +18,6 @@ class Solve():
             print('[----Ручной ввод----]')
             return sympify(input('Функция: ')).subs(x, val)
         if (flag == 2): 
-            # return val**2 + 1 # aka x^2 + 1 
             return 3*val**2 # aka 3x^2
         
     def solve(self, x: int | float, flag: int):
@@ -36,5 +35,5 @@ class Solve():
             
             `2 - Фиксированный`
         '''
-        h = 1e-5
-        return round(float(self.func((x + h), flag) - self.func((x - h), flag)) / (2 * h),4)
+
+        return round(float(self.func((x + self.h), flag) - self.func((x - self.h), flag)) / (2 * self.h),4)
